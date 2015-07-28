@@ -22,3 +22,7 @@
   undo = reset HEAD~1 --mixed
   amend = commit --amend --verbose
   aa = add .
+  rb = rebase
+  rbc = rebase --continue
+  rbi = rebase -i
+  cp = cherry-pick
