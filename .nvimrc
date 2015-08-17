@@ -3,7 +3,7 @@ filetype off
 set rtp+=~/.nvim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'JazzCore/ctrlp-cmatcher'
+Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-liquid'
@@ -77,7 +77,7 @@ nnoremap <leader>w <C-W>v<C-W>l
 
 " Navigate buffers using Ctrl+a and Ctrl+d
 nnoremap <C-d> :bnext<CR>
-nnoremap <C-a> :bprevious<CR>
+nnoremap <C-s> :bprevious<CR>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
@@ -87,6 +87,9 @@ map <C-l> <C-W>l
 
 " Select the text that was just pasted with <space>v
 nnoremap <leader>v V`]
+"
+" Setup CtrlP
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*.png,*.jpg,*.otf,*.woff,*.jpeg,*.orig,*/\.git/*,*/uploads/*
 
 " Deal with trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
