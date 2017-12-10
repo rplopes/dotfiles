@@ -6,23 +6,26 @@
 [push]
 	default = simple
 [pull]
-	rebase = true
+	rebase = preserve
+[apply]
+  whitespace = fix
 [alias]
-  st = status -s
+  aa = add .
+  amend = commit --amend --verbose
+  br = branch -v
   ci = commit --verbose
-  br = branch
   co = checkout
   cob = checkout -b
+  cp = cherry-pick
   df = diff
+  fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
   lg = log -p
-  tree = log --oneline --decorate --all --graph
-  sh = show
   pl = pull --rebase
+  sh = show
   ps = push
-  undo = reset HEAD~1 --mixed
-  amend = commit --amend --verbose
-  aa = add .
   rb = rebase
   rbc = rebase --continue
-  rbi = rebase -i
-  cp = cherry-pick
+  rbi = rebase -i --autosquash
+  st = status -s
+  tree = log --oneline --decorate --all --graph
+  undo = reset HEAD~1 --mixed
