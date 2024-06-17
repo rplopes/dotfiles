@@ -15,6 +15,10 @@ Requirements:
 - [vim-plug](https://github.com/junegunn/vim-plug): To manage vim plugins. Install with: `curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
 - [ripgrep](https://github.com/BurntSushi/ripgrep): For faster searches. Install on a mac with: `brew install ripgrep`
 
+## zellij.kdl
+
+Should be copied to `~/.config/zellij/config.kdl`.
+
 ## zsh
 
 Doesn't have a dotfile yet, but requires configuration:
