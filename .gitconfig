@@ -9,23 +9,3 @@
 	rebase = preserve
 [apply]
   whitespace = fix
-[alias]
-  aa = add .
-  amend = commit --amend --verbose
-  br = branch -v
-  ci = commit --verbose
-  co = checkout
-  cob = checkout -b
-  cp = cherry-pick
-  df = diff
-  fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
-  lg = log -p
-  pl = pull --rebase
-  sh = show
-  ps = push
-  rb = rebase
-  rbc = rebase --continue
-  rbi = rebase -i --autosquash
-  st = status -s
-  tree = log --oneline --decorate --all --graph
-  undo = reset HEAD~1 --mixed
