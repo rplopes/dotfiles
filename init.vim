@@ -1,16 +1,23 @@
 filetype plugin on
 
-call plug#begin('~/.config/nvim/plugged')
+" Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
 
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'raimondi/delimitmate'
-Plug 'shougo/deoplete.nvim', { do: function('DoRemote') }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-endwise'
 Plug 'vim-airline/vim-airline'
@@ -100,8 +107,6 @@ map <leader>a :Ack<space>
 
 " Initialize deoplete and set tab completion
 let g:deoplete#enable_at_startup=1
-let g:deoplete#enable_smart_case=1
-let g:deoplete#enable_camel_case=1
 
 " Set up vim-airline
 set laststatus=2
