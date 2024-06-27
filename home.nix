@@ -54,8 +54,8 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
-    ".config/nvim/init.vim".source = ~/Projects/dotfiles/init.vim;
-    ".config/zellij/config.kdl".source = ~/Projects/dotfiles/zellij.kdl;
+    ".config/nvim/init.vim".source = ~/.dotfiles/init.vim;
+    ".config/zellij/config.kdl".source = ~/.dotfiles/zellij.kdl;
   };
 
   # Home Manager can also manage your environment variables through

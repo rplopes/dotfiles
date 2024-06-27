@@ -31,4 +31,10 @@ Doesn't have a dotfile yet, but requires configuration:
 
 There's no need to copy dotfiles or install dependencies like suggested in the sections above if we're setting everything up with Nix and home-manager.
 
-To set these up, simply run `install.sh`. Then, make sure to copy `home.nix` to `~/.config/home-manager/home.nix`. Change whatever is relevant in that file (e.g. username and path), and finally, to set everything up, run `home-manager switch`.
+To set everything up automatically, simply run:
+
+```sh
+$ curl https://raw.githubusercontent.com/rplopes/dotfiles/master/install.sh | sh
+```
+
+This script will install Nix, home-manager, clone this dotfiles repo to `~/.dotfiles` and create a symlink for the home-manager config. Then, you can edit anything you need (like username and path), and finish setup by running `home-manager switch`.
