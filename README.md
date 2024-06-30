@@ -34,7 +34,9 @@ There's no need to copy dotfiles or install dependencies like suggested in the s
 To set everything up automatically, simply run:
 
 ```sh
-$ curl https://raw.githubusercontent.com/rplopes/dotfiles/master/install.sh | sh
+curl https://raw.githubusercontent.com/rplopes/dotfiles/master/install.sh | sh
 ```
 
 This script will install Nix, home-manager, clone this dotfiles repo to `~/.dotfiles` and create a symlink for the home-manager config. Then, you can edit anything you need (like username and path), and finish setup by running `home-manager switch`.
+
+Note: this setup script automates a lot of the work, but still requires a working GitHub local setup, as it's needed for cloning repos.
