@@ -11,16 +11,18 @@ For macs, we need homebrew to be able to install some of the required stuff ment
 Belongs to `~/.config/nvim/`.
 
 Requirements:
+
 - [neovim](https://github.com/neovim/neovim): Duh. Install on a mac with: `brew install neovim`
 - [vim-plug](https://github.com/junegunn/vim-plug): To manage vim plugins. Install with: `curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
 - [ripgrep](https://github.com/BurntSushi/ripgrep): For faster searches. Install on a mac with: `brew install ripgrep`
 
 ## zellij.kdl
 
-Should be copied to `~/.config/zellij/config.kdl`.
+Contents of the `zellij` directory should be copied to `~/.config/zellij`.
 
 ## zsh
 
 Doesn't have a dotfile yet, but requires configuration:
+
 - zsh: Install on a mac with: `brew install zsh zsh-completions`
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh): Install with: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
