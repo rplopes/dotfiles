@@ -2,13 +2,22 @@
 
 My collection of dotfiles. Feel free to steal whatever you find interesting. I try to keep these files descriptive so they're easy to learn from and to adapt.
 
-## macOS
-
-For macs, we need homebrew to be able to install some of the required stuff mentioned below. Install with: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`.
-
-To install all dependencies with homebrew's Brewfile:
+## Quick install
 
 ```
+git clone git@github.com:rplopes/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+./install.sh
+```
+
+Note: this quick installer doesn't deal with the actual dotfiles yet, or the dependencies mentioned below that can't be installed through homebrew.
+
+## Homebrew
+
+Homebrew is a package manager for MacOS and for Linux as well. It's installed with the quick install script above, and includes a Brewfile to automate installations. To add or remove any tool/app/plugin/etc, edit the Brewfile and run:
+
+```
+cd ~/.dotfiles
 brew bundle
 ```
 
