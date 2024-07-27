@@ -37,7 +37,6 @@ Contents of the `zellij` directory should be copied to `~/.config/zellij`.
 
 ## zsh
 
-Doesn't have a dotfile yet, but requires configuration:
+The zsh shell is installed through the Brewfile, and it uses [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), installed through the quick install script.
 
-- zsh: Included in Brewfile
-- [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh): Install with: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+After installation, copy `.zshrc` to `~/.zshrc` to override the changes made by oh-my-zsh.
