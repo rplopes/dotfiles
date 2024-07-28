@@ -40,3 +40,5 @@ Contents of the `zellij` directory should be copied to `~/.config/zellij`.
 The zsh shell is installed through the Brewfile, and it uses [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), installed through the quick install script.
 
 After installation, copy `.zshrc` to `~/.zshrc` to override the changes made by oh-my-zsh.
+
+This `.zshrc` sources from `~/.zshrc.local`, so you can use that second config file to store secrets and other device-specific config.
