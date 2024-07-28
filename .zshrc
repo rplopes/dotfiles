@@ -14,7 +14,7 @@ source $ZSH/oh-my-zsh.sh
 
 # The following lines were added by compinstall
 zstyle ':completion:*' completer _complete _ignored _approximate
-zstyle :compinstall filename '/Users/ricardo/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
